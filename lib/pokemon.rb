@@ -15,13 +15,13 @@ class Pokemon
     #     pokemon
     # end
 
-    def self.new_from_db(array)
-        pokemon = Pokemon.new("", "")
-        pokemon.id = array[0]
-        pokemon.name = array[1]
-        pokemon.type = array[2]
-        pokemon
-      end
+    # def self.new_from_db(array)
+    #     pokemon = Pokemon.new("", "")
+    #     pokemon.id = array[0]
+    #     pokemon.name = array[1]
+    #     pokemon.type = array[2]
+    #     pokemon
+    #   end
 
     def self.save(name, type, db)
             sql = <<-SQL
