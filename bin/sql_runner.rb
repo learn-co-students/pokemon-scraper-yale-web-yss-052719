@@ -11,6 +11,7 @@ class SQLRunner
   def execute_create_hp_column
     sql = File.read('db/alter_table_migration.sql')
     execute_sql(sql)
+    sql2 = File.read('db/set_hp.sql')
   end
 
   def execute_sql(sql)
