@@ -3,7 +3,7 @@ require 'pry'
 class Pokemon
 
     attr_accessor :id, :name, :type, :db, :hp
-    def initialize (id:, name:, type:, db:, hp:nil)
+    def initialize (id:, name:, type:, db:, hp: nil)
         @id = id
         @name = name
         @type = type
@@ -27,7 +27,7 @@ class Pokemon
 
         row = database.execute(sql,id)
         row = row[0]
-        new_object = self.new(id:row[0],name:row[1],type:row[2],db:database)
+        new_object = self.new(id:row[0],name:row[1],type:row[2], hp:row[3],db:database)
     end
 
     def alter_hp(hp, database)
